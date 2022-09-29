@@ -6,7 +6,8 @@
 //
 
 #import "AppDelegate.h"
-
+@import FirebaseCore;
+@import FirebaseRemoteConfig;
 @interface AppDelegate ()
 
 
@@ -16,6 +17,21 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   // Insert code here to initialize your application
+  [FIRApp configure];
+  FIRRemoteConfig* remoteConfig = [FIRRemoteConfig remoteConfig];
+
+  [remoteConfig fetchAndActivateWithCompletionHandler:^(
+                    FIRRemoteConfigFetchAndActivateStatus status, NSError *error) {
+    if (error != nil) {
+      NSLog(@"ERROR RECEIVED %@",error);
+    } else {
+      if (status == FIRRemoteConfigFetchAndActivateStatusSuccessFetchedFromRemote) {
+        NSLog(@"SUCCESSFULLY RECEIVED CONFIG");
+      } else {
+        NSLog(@"DID NOT SUCCESSFULLY RECEIVE CONFIG");
+      }
+    }
+  }];
 }
 
 

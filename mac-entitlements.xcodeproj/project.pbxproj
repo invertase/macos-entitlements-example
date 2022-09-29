@@ -12,6 +12,8 @@
 		466D38FE28E5A90400D61416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 466D38FD28E5A90400D61416 /* Assets.xcassets */; };
 		466D390128E5A90400D61416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 466D38FF28E5A90400D61416 /* Main.storyboard */; };
 		466D390328E5A90400D61416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 466D390228E5A90400D61416 /* main.m */; };
+		466D390D28E5ABFA00D61416 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 466D390C28E5ABFA00D61416 /* GoogleService-Info.plist */; };
+		AFA5B67CD84E7072E67021CF /* Pods_mac_entitlements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94054BA64AB9AA75E73F1F5E /* Pods_mac_entitlements.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,10 @@
 		466D38FD28E5A90400D61416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		466D390028E5A90400D61416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		466D390228E5A90400D61416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		466D390428E5A90400D61416 /* mac_entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mac_entitlements.entitlements; sourceTree = "<group>"; };
+		466D390C28E5ABFA00D61416 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		53903A902BC87AF077032D2D /* Pods-mac-entitlements.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mac-entitlements.debug.xcconfig"; path = "Target Support Files/Pods-mac-entitlements/Pods-mac-entitlements.debug.xcconfig"; sourceTree = "<group>"; };
+		94054BA64AB9AA75E73F1F5E /* Pods_mac_entitlements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mac_entitlements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B701F43F652B540D800263 /* Pods-mac-entitlements.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mac-entitlements.release.xcconfig"; path = "Target Support Files/Pods-mac-entitlements/Pods-mac-entitlements.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA5B67CD84E7072E67021CF /* Pods_mac_entitlements.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +46,11 @@
 		466D38EB28E5A90300D61416 = {
 			isa = PBXGroup;
 			children = (
+				466D390C28E5ABFA00D61416 /* GoogleService-Info.plist */,
 				466D38F628E5A90300D61416 /* mac-entitlements */,
 				466D38F528E5A90300D61416 /* Products */,
+				74DE51B1088E1FF06D3F62DF /* Pods */,
+				7764E905C7391325D21C665C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,9 +72,25 @@
 				466D38FD28E5A90400D61416 /* Assets.xcassets */,
 				466D38FF28E5A90400D61416 /* Main.storyboard */,
 				466D390228E5A90400D61416 /* main.m */,
-				466D390428E5A90400D61416 /* mac_entitlements.entitlements */,
 			);
 			path = "mac-entitlements";
+			sourceTree = "<group>";
+		};
+		74DE51B1088E1FF06D3F62DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53903A902BC87AF077032D2D /* Pods-mac-entitlements.debug.xcconfig */,
+				B1B701F43F652B540D800263 /* Pods-mac-entitlements.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7764E905C7391325D21C665C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94054BA64AB9AA75E73F1F5E /* Pods_mac_entitlements.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 466D390728E5A90400D61416 /* Build configuration list for PBXNativeTarget "mac-entitlements" */;
 			buildPhases = (
+				19684C169AE16F29FB8A0B41 /* [CP] Check Pods Manifest.lock */,
 				466D38F028E5A90300D61416 /* Sources */,
 				466D38F128E5A90300D61416 /* Frameworks */,
 				466D38F228E5A90300D61416 /* Resources */,
+				02F98F3227152857B9AF42EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +154,53 @@
 			files = (
 				466D38FE28E5A90400D61416 /* Assets.xcassets in Resources */,
 				466D390128E5A90400D61416 /* Main.storyboard in Resources */,
+				466D390D28E5ABFA00D61416 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02F98F3227152857B9AF42EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mac-entitlements/Pods-mac-entitlements-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mac-entitlements/Pods-mac-entitlements-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mac-entitlements/Pods-mac-entitlements-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19684C169AE16F29FB8A0B41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mac-entitlements-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		466D38F028E5A90300D61416 /* Sources */ = {
@@ -268,6 +338,7 @@
 		};
 		466D390828E5A90400D61416 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53903A902BC87AF077032D2D /* Pods-mac-entitlements.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,7 +357,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.invertase.testing.mac-entitlements";
+				PRODUCT_BUNDLE_IDENTIFIER = com.invertase.testing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -294,6 +365,7 @@
 		};
 		466D390928E5A90400D61416 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1B701F43F652B540D800263 /* Pods-mac-entitlements.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,7 +384,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.invertase.testing.mac-entitlements";
+				PRODUCT_BUNDLE_IDENTIFIER = com.invertase.testing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
