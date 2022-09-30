@@ -1,5 +1,5 @@
 # macos-entitlements-example
-How to Reproduce Keychain entitlements exception
+How to Reproduce Keychain entitlement's exception
 
 1. Clone repository.
 2. Run `pod install` from project root.
